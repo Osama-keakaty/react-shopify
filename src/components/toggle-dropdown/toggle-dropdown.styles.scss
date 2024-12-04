@@ -1,0 +1,91 @@
+$white-color: white;
+$black-color: black;
+
+.toggle-dropdown-container {
+    color: $white-color;
+    cursor: pointer;
+    position: relative;
+
+    .toggle-dropdown-title {
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+
+        img {
+            width: 20px;
+
+        }
+    }
+
+    .toggle-dropdown-content {
+        visibility: hidden;
+        opacity: 0;
+        color: $black-color;
+        background-color: $white-color;
+        position: absolute;
+        left: -5px;
+        display: flex;
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 10%);
+        padding: 10px;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+
+        &.opened {
+            opacity: 1;
+            transform: translateY(4px);
+            -webkit-transform: translateY(4px);
+            -moz-transform: translateY(4px);
+            -ms-transform: translateY(4px);
+            -o-transform: translateY(4px);
+            visibility: visible;
+        }
+
+        &.closed {
+            opacity: 0;
+            transform: translateY(-10px);
+            -webkit-transform: translateY(-10px);
+            -moz-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            -o-transform: translateY(-10px);
+        }
+
+        .toggle-dropdown-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+
+            &:hover {
+                background-color: rgb(236, 235, 235);
+            }
+
+            img {
+                height: 20px;
+            }
+        }
+    }
+}

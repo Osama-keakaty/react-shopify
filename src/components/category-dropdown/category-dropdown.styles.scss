@@ -1,0 +1,25 @@
+$aqua:#1ac8e1;
+.category-dropdown-container {
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+
+font-size: 14px;
+@media(max-width:600px){
+    font-size: 2.5vw;
+}
+    &:hover {
+        background-color: #eceff2;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: $aqua;
+}
+
+    img {
+        width: 20px;
+    }
+
+}

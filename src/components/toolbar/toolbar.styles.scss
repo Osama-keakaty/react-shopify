@@ -1,0 +1,50 @@
+$main-color: #2b3445;
+$second-color: #d23f57;
+$white-color: white;
+$black-color: black;
+$max-width:600px;
+
+.toolbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .logo-container{
+        cursor: pointer;
+        @media (max-width:$max-width) {
+            display: none;
+        }
+
+    }
+    .search-box {
+        width: 60%;
+    }
+
+    .toolbar-icons {
+        display: flex;
+        gap: 5px;
+
+        .toolbar-icon {
+            background-color: $main-color;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            padding: 20px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+        
+    }
+}

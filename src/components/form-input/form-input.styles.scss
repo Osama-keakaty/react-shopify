@@ -1,0 +1,33 @@
+.form-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+.form-input-label{
+    color: aliceblue;
+}
+    .form-input {
+        width: 100%;
+        padding: 0.65rem 0.5rem;
+        font-size: 1rem;
+        color: white;
+        border: 2px solid #4a5568;
+        background-color: #2d3748;
+        border-radius: 10px;
+        outline: none;
+        &:focus{
+            border-color: #4299e1;
+        }
+
+        &.input-error {
+            border-color: #ff4f4f;
+        }
+    }
+
+
+    .error {
+        color: #ff4f4f;
+        font-size: 0.75rem;
+        text-align: left;
+        margin-top: 0.25rem;
+    }
+}

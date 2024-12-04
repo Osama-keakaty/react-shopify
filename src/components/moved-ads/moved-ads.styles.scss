@@ -1,0 +1,76 @@
+$main-color: #2b3445;
+$second-color: #d23f57;
+$white-color: white;
+$black-color: black;
+$aqua: #1ac8e1;
+$max-width: 600px;
+
+.moved-ads-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: $main-color;
+    margin: 10px 6vw;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width:$max-width) {
+        display: none;
+    }
+
+    &::after {
+        content: 'Black Friday Sales Left';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        left: -25px;
+        font-size: 1.7vw;
+        font-weight: 700;
+        background-color: $second-color;
+        transform: skew(-35deg);
+        -webkit-transform: skew(-35deg);
+        -moz-transform: skew(-35deg);
+        -ms-transform: skew(-35deg);
+        -o-transform: skew(-35deg);
+}
+
+    .moved-ads-content {
+        width: 90%;
+        border: 1px dashed $white-color;
+        flex: 1;
+        display: flex;
+        justify-content: end;
+        overflow: hidden;
+
+        .moved-ads-text {
+            color: $white-color;
+            animation: move-ads calc(10s) linear infinite;
+            -webkit-animation: move-ads calc(10s) linear infinite;
+            font-size: 2vw;
+            margin: .5vw 0;
+}
+    }
+}
+
+@keyframes move-ads {
+    from {
+        transform: translateX(43vw);
+        -webkit-transform: translateX(43vw);
+        -moz-transform: translateX(43vw);
+        -ms-transform: translateX(43vw);
+        -o-transform: translateX(43vw);
+}
+
+    to {
+        transform: translateX(-63vw);
+        -webkit-transform: translateX(-63vw);
+        -moz-transform: translateX(-63vw);
+        -ms-transform: translateX(-63vw);
+        -o-transform: translateX(-63vw);
+}
+}

@@ -1,0 +1,57 @@
+.sign-in-form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .sign-in-title {
+        color: white;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        button {
+            display: block;
+            margin: 1rem 0;
+            padding: 0.35rem 0.5rem;
+            background-color: #000c2c;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            &.sign-out-btn{
+                background-color: #e14242;
+
+            }
+
+            &:disabled {
+                opacity: 0.35;
+            }
+            
+        }
+
+    }
+    .google-sign-in-btn{
+        width: 95%;
+        background-color: #4299e1;
+        color: #1a202c;
+        display: block;
+        margin: 1rem 0;
+        padding: 0.35rem 0.5rem;
+        border: none;
+        border-radius: 3px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+
+}

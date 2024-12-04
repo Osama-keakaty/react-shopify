@@ -1,0 +1,86 @@
+$white-color: #fff;
+$black-color: #000;
+$aqua: #1ac8e1;
+
+.categories-dropdown-container {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+    // width: 20vw;
+    
+    .categories-dropdown-title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px;
+        background-color: #f6f9fc;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        span{
+            font-size: 14px;
+            @media(max-width:600px){
+                font-size: 2.5vw;
+            }
+        }
+        img {
+            width: 20px;
+            @media(max-width:600px){
+                width: 5vw;
+                flex-direction: column;
+                gap: 30px;
+            }
+            .categories-dropdown-icon{
+                font-size: 20px;
+                @media(max-width:600px){
+                    font-size: 2.9vw;
+                }
+            }
+        }
+
+        &:hover {
+            color: $aqua;
+        }
+
+    }
+
+    .categories-dropdown-content {
+        visibility: hidden;
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        color: $black-color;
+        background-color: #f6f9fc;
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 10%);
+        padding: 10px;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        &.opened {
+            opacity: 1;
+            top: 50px;
+            visibility: visible;
+        }
+
+        &.closed {
+            opacity: 0;
+            top: 30px;
+        }
+    }
+}

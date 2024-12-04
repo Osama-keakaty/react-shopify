@@ -1,0 +1,40 @@
+$max-width: 600px;
+$main-color: #2b3445;
+$second-color: #d23f57;
+$white-color: white;
+$black-color: black;
+$aqua: #1ac8e1;
+
+.tab-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .dropdowns-container {
+        @media (max-width:$max-width) {
+            display: none;
+        }
+
+        display: flex;
+        gap: 20px;
+    }
+
+    .hamburger-menu {
+        display: none;
+        background-color: #2b3445;
+        color: $white-color;
+        padding: 7px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+
+        @media(max-width:$max-width) {
+            display: flex;
+        }
+    }
+}
