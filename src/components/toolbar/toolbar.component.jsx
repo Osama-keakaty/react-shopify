@@ -4,7 +4,7 @@ import cart from '../../assets/cart.png'
 import SearchBox from '../search-box/search-box.component'
 import { useCartStore } from '../../stores/cart.store'
 import { useShallow } from 'zustand/shallow'
-import { ReactComponent as CrwnLogo } from '../../assets/crown.svg'
+import { ReactComponent as ShopLogo } from '../../assets/shop-logo.svg'
 import Sidebar from '../sidebar/sidebar.component'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -35,10 +35,11 @@ const Toolbar = () => {
     return (
         <div className="toolbar-container">
             <div className="sidbar">
-                <Sidebar isOpened={isOpened} children={<h1>hey</h1>}/>
+                <Sidebar isOpened={isOpened} children={<h1>hey</h1>} />
             </div>
             <Link to={'/'} className="logo-container" >
-                <CrwnLogo/>
+                <ShopLogo />
+                <h5>React <br />Shopify</h5>
             </Link>
             <div className="search-box">
                 <SearchBox />
@@ -49,6 +50,7 @@ const Toolbar = () => {
                 </Link>
                 <div className="toolbar-icon" onClick={() => setIsOpened(!isOpened)}>
                     <img src={cart} alt="" />
+                    <span className='cart-items-count'>60</span>
                 </div>
             </div>
         </div>

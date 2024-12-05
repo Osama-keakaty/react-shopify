@@ -9,7 +9,7 @@ const Auth = () => {
             <div className="auth-content">
                 <div className="auth-selection">
                 </div>
-                <div className="auth-form">
+                <div className="auth-forms">
                     <div className="auth-sign-in-container">
                         <SignIn />
                     </div>

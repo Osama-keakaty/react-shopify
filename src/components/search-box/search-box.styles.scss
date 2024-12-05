@@ -12,8 +12,11 @@ $aqua:#1ac8e1;
         padding-left: 10px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        border: 1px solid #7d7d7d;
+        border: 1px solid #d8d8d8;
         outline: none;
+        &::placeholder{
+            color:#cccccc;
+        }
         &:focus, &:hover{
             border: 1px solid $aqua;
         }

@@ -87,7 +87,7 @@ const SignIn = () => {
                     <button onClick={signOutHandler} className='sign-out-btn'>SIGN OUT</button>
                     : <button disabled={isSubmitting} type="submit">SIGN IN</button>}
             </form>
-                <button onClick={signInWithGoogle} className='google-sign-in-btn'>GOOGLE SIGN IN</button>
+            <button onClick={signInWithGoogle} className='google-sign-in-btn'>GOOGLE SIGN IN</button>
         </div>
     )
 }
