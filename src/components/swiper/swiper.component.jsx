@@ -6,24 +6,14 @@ import swiperImage4 from './../../assets/cat4.jpg';
 import swiperImage5 from './../../assets/cat5.jpg';
 import swiperImage6 from './../../assets/cat6.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useEffect, useState } from 'react';
 import 'swiper/css';
+import { useAppStore } from '../../stores/app.store';
+import { useShallow } from 'zustand/shallow';
 
 const SwiperComponent = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [setWindowWidth]);
+    const { widthWindow } = useAppStore(useShallow((state) => ({
+        widthWindow: state.widthWindow,
+    })))
 
     const swiperImages = [
         {
@@ -58,7 +48,7 @@ const SwiperComponent = () => {
             <Swiper
                 className="swiper-content"
                 spaceBetween={40}
-                slidesPerView={windowWidth <= 600 ? 3 : windowWidth <= 1000 ? 4 : 5}
+                slidesPerView={widthWindow <= 600 ? 3 : widthWindow <= 1000 ? 4 : 5}
             >
                 {swiperImages.map((item, index) => (
                     <SwiperSlide className="swiper-item" key={index}>

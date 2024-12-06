@@ -18,10 +18,14 @@ const SignIn = () => {
 
         } catch (error) {
             if (error.code === "auth/invalid-credential") {
-                console.log("invalid email or password");
+                alert("invalid email or password");
+
+            } else if (error.code === "auth/network-request-failed") {
+alert('Please ensure you are connected to a VPN to access this service')
+            } else {
+                console.log("error", error.message)
 
             }
-            console.log("error", error.message)
         }
 
     }

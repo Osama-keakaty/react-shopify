@@ -1,14 +1,13 @@
 import './moved-ads.styles.scss'
-const MovedAds = () => {
+const MovedAds = ({ title }) => {
     return (
         <div className='moved-ads-container'>
             <div className="moved-ads-content">
                 <h4 className='moved-ads-text'>
-                PAY ONLY FOR YOUR LOVING ELECTRONICS
+                    {title}
                 </h4>
             </div>
         </div>
-
     )
 }
 

@@ -47,6 +47,7 @@ $black-color: black;
         -moz-transform: translateY(-10px);
         -ms-transform: translateY(-10px);
         -o-transform: translateY(-10px);
+        z-index: 10;
 
         &.opened {
             opacity: 1;

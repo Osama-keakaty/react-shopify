@@ -1,0 +1,113 @@
+$max-width: 720px;
+$main-color: #2b3445;
+$second-color: #d23f57;
+$white-color: white;
+$black-color: black;
+
+.product-card-container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    align-items: center;
+    position: relative;
+    margin-bottom: 60px;
+    @media(max-width:$max-width) {
+
+        width: 40vw;
+        height: 45vw;
+
+    }
+
+
+    img {
+        width: 100%;
+        height: 75%;
+        object-fit: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        cursor: pointer;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.8;
+        }
+
+    }
+
+    .footer {
+        background-color: #ebebeb;
+        width: 100%;
+        display: flex;
+        font-size: 18px;
+        height: 30%;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2px;
+        padding: 10px 20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+        @media(max-width:$max-width) {
+            font-size: 2.7vw;
+            padding: 10px;
+
+        }
+
+        .product-card-details-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            .name {
+                margin: 0;
+            }
+
+            .price {
+                display: flex;
+                align-items: center;
+            }
+
+            .rating-stars-container {
+                color: #fadb14;
+                display: flex;
+            }
+        }
+
+        .add-to-cart-button {
+            border: 1px solid $second-color;
+            background-color: transparent;
+            color: $second-color;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+            -ms-transition: .2s;
+            -o-transition: .2s;
+            scale: 1.1;
+            @media(max-width:$max-width) {
+                font-size: 2.7vw;
+                width: 6vw;
+                height: 6vw;
+    
+            }
+            &:active {
+                scale: 1;
+                background-color: $second-color;
+                color: $white-color;
+            }
+        }
+
+    }
+}

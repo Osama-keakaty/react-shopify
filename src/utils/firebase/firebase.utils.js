@@ -83,9 +83,11 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
     } catch (error) {
         if (error.code === 'auth/email-already-in-use') {
             alert('Cannot create user, email already in use')
+        } else if (error.code === "auth/network-request-failed") {
+            alert('Please ensure you are connected to a VPN to access this service')
         } else {
 
-            alert(error.message)
+            console.log("error", error.message)
         }
     }
 };
@@ -98,8 +100,12 @@ export const signInUserWithEmailAndPassword = async (email, password) => {
     } catch (error) {
         if (error.code === 'auth/invalid-credential') {
             alert('Wrong email or password')
+        } else if (error.code === "auth/network-request-failed") {
+            alert('Please ensure you are connected to a VPN to access this service')
+        } else {
+
+            console.log("error", error.message)
         }
-        console.log("error", error.message)
     }
 }
 

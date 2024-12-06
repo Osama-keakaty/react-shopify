@@ -6,6 +6,23 @@ body {
   user-select: none;
   background-color: #f6f9fc;
   overflow-x: hidden;
+  appearance: none;
+
+  &::-webkit-scrollbar {
+      width: 15px;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: #888;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
 }
 
 *{

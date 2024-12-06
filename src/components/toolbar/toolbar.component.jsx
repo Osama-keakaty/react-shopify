@@ -8,13 +8,14 @@ import { ReactComponent as ShopLogo } from '../../assets/shop-logo.svg'
 import Sidebar from '../sidebar/sidebar.component'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import SidebarCart from '../sidebar-cart/sidebar-cart.component'
 
 const Toolbar = () => {
-    const { isOpened, setIsOpened } = useCartStore(useShallow((state) => ({
-        isOpened: state.isOpened,
-        setIsOpened: state.setIsOpened
+    const { cartIsOpened, setCartIsOpened,productNum } = useCartStore(useShallow((state) => ({
+        cartIsOpened: state.cartIsOpened,
+        setCartIsOpened: state.setCartIsOpened,
+        productNum:state.productNum,
     })))
-
     useEffect(() => {
 
         const closeHandler = (event) => {
@@ -24,18 +25,18 @@ const Toolbar = () => {
                 element.classList && (element.classList.contains('toolbar-icon') || element.classList.contains('sidebar-container'))
             );
             if (toolbarIcon === undefined) {
-                setIsOpened(false)
+                setCartIsOpened(false)
             }
 
         }
         document.body.addEventListener('click', closeHandler);
         return () => document.body.removeEventListener('click', closeHandler)
             ;
-    }, [setIsOpened]);
+    }, [setCartIsOpened]);
     return (
         <div className="toolbar-container">
             <div className="sidbar">
-                <Sidebar isOpened={isOpened} children={<h1>hey</h1>} />
+                <Sidebar isOpened={cartIsOpened} children={<SidebarCart/>} />
             </div>
             <Link to={'/'} className="logo-container" >
                 <ShopLogo />
@@ -48,9 +49,9 @@ const Toolbar = () => {
                 <Link className="toolbar-icon" to={'/auth'}>
                     <img src={user} alt="" />
                 </Link>
-                <div className="toolbar-icon" onClick={() => setIsOpened(!isOpened)}>
+                <div className="toolbar-icon" onClick={() => setCartIsOpened(!cartIsOpened)}>
                     <img src={cart} alt="" />
-                    <span className='cart-items-count'>60</span>
+                    <span className='cart-items-count'>{productNum}</span>
                 </div>
             </div>
         </div>
