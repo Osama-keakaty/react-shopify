@@ -1,8 +1,9 @@
  product-preview
- cart sidebar
+ cart sidebar           'done'
  searching box 
  checkout 
  language
  dark mode
  typeScript
  upload cart to fireStore
+ footer

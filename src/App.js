@@ -5,12 +5,7 @@ import { onAuthStateChangedListener, createUserDocumentFromAuth } from './utils/
 import { useAuthStore } from './stores/auth.store.js';
 import { useShallow } from 'zustand/shallow';
 import { useAppStore } from './stores/app.store.js';
-
-
-// import Home from './routes/home/home.component'
-// import Navigation from './routes/navigation/navigation.component'
-// import Auth from './routes/auth/auth.component'
-// import Category from './components/category/category.component.jsx';
+import LoadingScreen from './components/loading-screen/loading-screen.component.jsx';
 
 const Home = lazy(() => import('./routes/home/home.component'))
 const Navigation = lazy(() => import('./routes/navigation/navigation.component'))
@@ -52,14 +47,15 @@ function App() {
 
   return (
     <div className='app' >
-      <Suspense fallback={<p>loading ...</p>}>
+      <Suspense fallback={<LoadingScreen />}>
         <Routes>
           <Route path="/" element={<Navigation />}>
             <Route index element={<Home />} />
             <Route path=':category/*' element={<Category />} />
           </Route>
-          <Route path='/auth' element={<Auth />}>
-          </Route>
+          <Route path='/auth' element={<Auth />} />
+
+          <Route path='/loading' element={<LoadingScreen />} />
         </Routes>
       </Suspense>
     </div>

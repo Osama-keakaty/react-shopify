@@ -8,7 +8,7 @@ $aqua: #1ac8e1;
     cursor: pointer;
     z-index: 100;
     // width: 20vw;
-    
+
     .categories-dropdown-title {
         width: 100%;
         display: flex;
@@ -22,30 +22,37 @@ $aqua: #1ac8e1;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-        span{
+        &:hover {
+            color: $aqua;
+        }
+
+        span {
             font-size: 14px;
-            @media(max-width:600px){
+
+            @media(max-width:600px) {
                 font-size: 2.5vw;
             }
         }
-        img {
+
+        .categories-logo {
             width: 20px;
-            @media(max-width:600px){
+
+            @media(max-width:600px) {
                 width: 5vw;
                 flex-direction: column;
                 gap: 30px;
             }
-            .categories-dropdown-icon{
-                font-size: 20px;
-                @media(max-width:600px){
-                    font-size: 2.9vw;
-                }
-            }
+
         }
 
-        &:hover {
-            color: $aqua;
+        .categories-dropdown-icon {
+            font-size: 20px;
+
+            @media(max-width:600px) {
+                font-size: 2.9vw;
+            }
         }
+     
 
     }
 

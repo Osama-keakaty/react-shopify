@@ -4,7 +4,7 @@ import CategoryDropdown from '../category-dropdown/category-dropdown.component';
 import { useNavigationStore } from '../../stores/navigation.store';
 import { useShallow } from 'zustand/shallow';
 import { RiArrowDropDownLine } from "react-icons/ri";
-import CategoriesImage from '../../assets/categories.png'
+import { TbCategory } from "react-icons/tb";
 import { useEffect } from 'react';
 const CategoriesDropdown = () => {
     const { categoriesDropdownIsOpened, setCategoriesDropdownIsOpened } = useNavigationStore(useShallow((state) => ({
@@ -36,9 +36,9 @@ const CategoriesDropdown = () => {
     return (
         <div className='categories-dropdown-container'>
             <div className="categories-dropdown-title" onClick={categoriesOpenedHandler}>
-                <img src={CategoriesImage} alt="" />
+                <TbCategory size={25} className='categories-logo'/>
                 <span>Categories</span>
-                <RiArrowDropDownLine size={25} className='categories-dropdown-icon'/>
+                <RiArrowDropDownLine size={25} className='categories-dropdown-icon' />
             </div>
             <div className={`categories-dropdown-content ${categoriesDropdownIsOpened ? 'opened' : 'closed'}`}>
                 {categoriesData.map((category) =>

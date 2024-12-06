@@ -1,5 +1,6 @@
 import './category-dropdown.styles.scss'
-import shoppingCart from '../../assets/shopping-cart.png'
+// import shoppingCart from '../../assets/shopping-cart.png'
+import { MdShoppingCartCheckout } from "react-icons/md";
 import { useNavigationStore } from '../../stores/navigation.store';
 import { useShallow } from 'zustand/shallow';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +15,8 @@ const CategoryDropdown = ({ category }) => {
     }
     return (
         <div className='category-dropdown-container' onClick={categoryClickedHandler}>
-        <img src={shoppingCart} alt=""/>
+        {/* <img src={shoppingCart} alt=""/> */}
+        <MdShoppingCartCheckout size={20}/>
             <span>{category.title}</span>
         </div>
     )
