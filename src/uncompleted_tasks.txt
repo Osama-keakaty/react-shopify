@@ -1,4 +1,4 @@
- product-preview
+ product-preview        'done'
  cart sidebar           'done'
  searching box 
  checkout 
@@ -6,4 +6,4 @@
  dark mode
  typeScript
  upload cart to fireStore
- footer
+ footer                 'done'

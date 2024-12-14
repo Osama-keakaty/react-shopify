@@ -13,7 +13,6 @@ $black-color: black;
     position: relative;
     margin-bottom: 60px;
     @media(max-width:$max-width) {
-
         width: 40vw;
         height: 45vw;
 
@@ -36,7 +35,7 @@ $black-color: black;
 
     }
 
-    .footer {
+    .footer-card {
         background-color: #ebebeb;
         width: 100%;
         display: flex;

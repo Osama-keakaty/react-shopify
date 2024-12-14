@@ -1,0 +1,97 @@
+$max-width: 600px;
+$main-color: #000c2c;
+$second-color: #d23f57;
+$white-color: white;
+$black-color: black;
+
+.product-preview-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    
+    .product {
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: start;
+        
+    @media (max-width:$max-width) {
+        align-items: center;
+        flex-direction: column;
+    }
+
+        .product-discription {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .price {
+                color: #d23f57;
+            }
+
+            .rating {
+                display: flex;
+                gap: 10px;
+
+                .rating-stars-container {
+                    color: #fadb14;
+                    display: flex;
+
+                }
+            }
+
+            .add-btn {
+                width: 200px;
+                padding: 10px 5px;
+                border: 0;
+                outline: 0;
+                background-color: $second-color;
+                color: $white-color;
+                border-radius: 2px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                -o-border-radius: 2px;
+                cursor: pointer;
+                transition: .2s;
+                -webkit-transition: .2s;
+                -moz-transition: .2s;
+                -ms-transition: .2s;
+                -o-transition: .2s;
+                scale: 1.1;
+
+                @media (max-width:$max-width) {
+                    align-self: center;
+                }
+
+                &:active {
+                    scale: 1;
+                    background-color: $second-color;
+                    color: $white-color;
+                }
+            }
+
+
+        }
+
+        .product-img {
+            width: 50%;
+            img {
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+
+                @media (max-width:$max-width) {
+                    width: 50vw;
+                }
+            }
+        }
+
+    }
+
+}

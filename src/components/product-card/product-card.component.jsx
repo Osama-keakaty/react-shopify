@@ -11,7 +11,7 @@ const ProductCard = ({ product, categoryName }) => {
     const cartItems = useCartStore(useShallow(state => state.cartItems))
     const navigate = useNavigate();
     const navigateHandler=()=>{
-    navigate(categoryName ? `${categoryName}/${product.id}`:`${product.id}`)
+    navigate(`/${categoryName}/${product.id}`)
     }
     useEffect(() => {
         setProductNum()
@@ -20,7 +20,7 @@ const ProductCard = ({ product, categoryName }) => {
         <div className='product-card-container'>
 
                 <img src={product.imageUrl} alt="" onClick={navigateHandler}/>
-            <div className="footer">
+            <div className="footer-card">
                 <div className='product-card-details-container'>
                     <h5 className='name'>{product.name}</h5>
                     <div className="rating-stars-container">

@@ -22,14 +22,15 @@ $max-width: 600px;
     &::after {
         content: 'Black Friday Sales Left';
         display: flex;
-        justify-content: center;
+        justify-content: end;
+        padding: 20px;
         align-items: center;
         color: $white-color;
         position: absolute;
         width: 30%;
         height: 100%;
-        left: -25px;
-        font-size: 1.7vw;
+        left: -30px;
+        font-size: 2vw;
         font-weight: 700;
         background-color: $second-color;
         transform: skew(-35deg);
@@ -37,7 +38,7 @@ $max-width: 600px;
         -moz-transform: skew(-35deg);
         -ms-transform: skew(-35deg);
         -o-transform: skew(-35deg);
-}
+    }
 
     .moved-ads-content {
         width: 90%;
@@ -53,7 +54,7 @@ $max-width: 600px;
             -webkit-animation: move-ads calc(10s) linear infinite;
             font-size: 2vw;
             margin: .5vw 0;
-}
+        }
     }
 }
 
@@ -64,7 +65,7 @@ $max-width: 600px;
         -moz-transform: translateX(43vw);
         -ms-transform: translateX(43vw);
         -o-transform: translateX(43vw);
-}
+    }
 
     to {
         transform: translateX(-63vw);
@@ -72,5 +73,5 @@ $max-width: 600px;
         -moz-transform: translateX(-63vw);
         -ms-transform: translateX(-63vw);
         -o-transform: translateX(-63vw);
-}
+    }
 }

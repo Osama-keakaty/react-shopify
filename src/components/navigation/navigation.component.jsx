@@ -9,10 +9,10 @@ import lightMode from '../../assets/light-mode.png'
 import darkMode from '../../assets/dark-mode.png'
 import { useNavigate } from 'react-router-dom'
 import { useNavigationStore } from '../../stores/navigation.store'
-import ToggleDropdown from '../../components/toggle-dropdown/toggle-dropdown.component'
-import Toolbar from '../../components/toolbar/toolbar.component'
+import ToggleDropdown from '../toggle-dropdown/toggle-dropdown.component'
+import Toolbar from '../toolbar/toolbar.component'
 import { useShallow } from 'zustand/shallow'
-import TabBar from '../../components/tab-bar/tab-bar.component'
+import TabBar from '../tab-bar/tab-bar.component'
 
 const Navigation = () => {
     const navigate = useNavigate();

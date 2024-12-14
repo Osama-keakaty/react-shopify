@@ -7,6 +7,10 @@ $black-color: black;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
+    border-bottom:1px  solid rgb(231, 229, 229);
+    padding: 10px 0;
+    margin-right:5px ;
+    
 
     .sidebar-cart-product-text {
         width: 10%;
@@ -69,7 +73,12 @@ $black-color: black;
             width: 70px;
             height: 70px;
             object-fit: cover;
-        }
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+}
 
     }
 

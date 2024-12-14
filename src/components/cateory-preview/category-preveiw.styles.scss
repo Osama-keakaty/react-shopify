@@ -1,5 +1,5 @@
 $max-width: 600px;
-$main-color: #2b3445;
+$main-color: #000c2c;
 $second-color: #d23f57;
 $white-color: white;
 $black-color: black;
@@ -10,7 +10,7 @@ $black-color: black;
     justify-content: space-between;
     gap: 20px;
     padding-left: 20px;
-    // margin: 20px;
+    margin-top: 30px;
 
     .category-preview-header-container {
         color: $main-color;

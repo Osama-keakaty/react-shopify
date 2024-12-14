@@ -21,7 +21,7 @@ const SignIn = () => {
                 alert("invalid email or password");
 
             } else if (error.code === "auth/network-request-failed") {
-alert('Please ensure you are connected to a VPN to access this service')
+                alert('Please ensure you are connected to a VPN to access this service')
             } else {
                 console.log("error", error.message)
 
@@ -34,7 +34,15 @@ alert('Please ensure you are connected to a VPN to access this service')
             const { user } = await signInWithGooglePopup();
             await createUserDocumentFromAuth(user);
         } catch (error) {
-            console.log("there is an error");
+            if (error.code === "auth/invalid-credential") {
+                alert("invalid email or password");
+
+            } else if (error.code === "auth/network-request-failed") {
+                alert('Please ensure you are connected to a VPN to access this service')
+            } else {
+                console.log("error", error.message)
+
+            }
         }
     }
 

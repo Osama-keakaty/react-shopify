@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { useAppStore } from '../../stores/app.store';
 import { useShallow } from 'zustand/shallow';
 import { useNavigate } from 'react-router-dom';
-
+import 'swiper/swiper-bundle.css';  
 
 const CategoryPreview = ({ categoryPreview, categoryName }) => {
     const navigate = useNavigate()
@@ -12,8 +12,9 @@ const CategoryPreview = ({ categoryPreview, categoryName }) => {
         widthWindow: state.widthWindow,
     })))
     const navigateHandler = () => {
-        navigate(categoryName)
+        navigate(`/${categoryName}`)
     }
+    
 
     return (
         <div className='category-preview-container'>
@@ -24,7 +25,7 @@ const CategoryPreview = ({ categoryPreview, categoryName }) => {
             </div>
             <div className='category-preview-swiper-container'>
 
-                <Swiper
+                {categoryPreview && <Swiper
                     spaceBetween={30}
                     slidesPerView={widthWindow <= 970 ? 2 : widthWindow <= 1200 ? 3 : 4}
                 >
@@ -34,7 +35,7 @@ const CategoryPreview = ({ categoryPreview, categoryName }) => {
                             <ProductCard product={product} categoryName={categoryName} />
                         </SwiperSlide>
                     )}
-                </Swiper>
+                </Swiper>}
             </div>
         </div>
     )

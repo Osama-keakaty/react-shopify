@@ -2,7 +2,7 @@ export const categoriesData = [
     {
         "id": 1,
         "title": "Hats",
-        "imageUrl": "https://img.freepik.com/free-photo/view-composition-with-neatly-arranged-organized-sport-items_23-2150275227.jpg?t=st=1733361664~exp=1733365264~hmac=325128306e95de238a106a88d7a86653fe4f13f1dc02e91d59aedfb6a46ca768&w=996"
+        "imageUrl": "https://img.freepik.com/premium-photo/baseball-caps-white-background-mock-up-design_1235831-295798.jpg"
     }, {
         "id": 2,
         "title": "Women",
@@ -11,7 +11,7 @@ export const categoriesData = [
     {
         "id": 3,
         "title": "Men",
-        "imageUrl": "https://img.freepik.com/free-photo/still-life-with-classic-shirts-hanger_23-2150828627.jpg?t=st=1733363220~exp=1733366820~hmac=1392244bb2eeb18dacf630e8f244fdb524472ce6f22c8c90eb4c5bcebe5f1f66&w=996"
+        "imageUrl": "https://img.freepik.com/free-photo/still-life-with-classic-shirts-hanger_23-2150828627.jpg"
     },
     {
         "id": 4,

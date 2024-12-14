@@ -8,7 +8,7 @@ import { useAppStore } from './stores/app.store.js';
 import LoadingScreen from './components/loading-screen/loading-screen.component.jsx';
 
 const Home = lazy(() => import('./routes/home/home.component'))
-const Navigation = lazy(() => import('./routes/navigation/navigation.component'))
+const Layout = lazy(() => import('./routes/layout/layout.component.jsx'))
 const Auth = lazy(() => import('./routes/auth/auth.component'))
 const Category = lazy(() => import('./components/category/category.component.jsx'))
 function App() {
@@ -49,7 +49,7 @@ function App() {
     <div className='app' >
       <Suspense fallback={<LoadingScreen />}>
         <Routes>
-          <Route path="/" element={<Navigation />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path=':category/*' element={<Category />} />
           </Route>

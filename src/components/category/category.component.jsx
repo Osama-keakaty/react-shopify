@@ -14,7 +14,7 @@ const Category = () => {
         return (
             <div className="category-Route-container">
                 {Array.isArray(products.items) &&
-                    products.items.map((product => <ProductCard key={product.id} product={product} />))
+                    products.items.map((product => <ProductCard categoryName={category} key={product.id} product={product} />))
                 }
             </div>
 
@@ -24,7 +24,7 @@ const Category = () => {
         <>
             <Routes>
             <Route index element={<Cate />}/>
-                <Route path=':id' element={<ProductPreview />} />
+                <Route path=':id' element={<ProductPreview category={category}/>} />
         </Routes>
 
         </>
