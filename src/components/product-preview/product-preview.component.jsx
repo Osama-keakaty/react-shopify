@@ -20,8 +20,6 @@ const ProductPreview = ({ category }) => {
             })
                 .find(item => item.id === id);
         };
-
-        console.log(SHOP_DATA)
         setProduct(getItemById(+id))
     }, [product, id,]);
     return (

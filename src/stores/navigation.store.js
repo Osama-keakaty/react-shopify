@@ -8,14 +8,18 @@ export const useNavigationStore = create((set) => ({
         img:  English
     },
     setLanguage: (value) => set({ language: value }),
+
     dropdownLanguage:false,
     setDropdownLanguage:(value)=>set({dropdownLanguage:value}),
+
     mode:{
         id: 2,
         value: "light",
         img:  lightMode
     },
     setMode:(value)=>set({mode:value}),
+
+    
     hamburgerMenuIsOpened:false,
     setHamburgerMenuIsOpened:(value)=>set({hamburgerMenuIsOpened:value}),
 
@@ -24,4 +28,7 @@ export const useNavigationStore = create((set) => ({
     
     categoriesDropdownIsOpened:false,
     setCategoriesDropdownIsOpened : (value)=>set({categoriesDropdownIsOpened:value}),
+
+    searchBoxIsOpened:false,
+    setSearchBoxIsOpened : (value)=>set({searchBoxIsOpened:value}),
 }));

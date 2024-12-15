@@ -2,8 +2,10 @@ import { Route, Routes, useParams } from 'react-router-dom';
 import './category.styles.scss'
 import { useEffect, useState } from 'react';
 import SHOP_DATA from '../../shop-data';
-import ProductCard from '../product-card/product-card.component';
-import ProductPreview from '../product-preview/product-preview.component';
+import ProductCard from '../../components/product-card/product-card.component';
+import ProductPreview from '../../components/product-preview/product-preview.component';
+
+
 const Category = () => {
     const { category } = useParams();
     const [products, setProducts] = useState([]);

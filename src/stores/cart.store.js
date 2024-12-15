@@ -13,19 +13,19 @@ export const useCartStore = create((set) => ({
                 cartItems: state.cartItems.map(item => item.id === productToAdd.id ?
                     { ...item, quantity: item.quantity + 1 }
                     : item)
+                }
             }
-        }
-        return { cartItems: [...state.cartItems, { ...productToAdd, quantity: 1 }] };
-    }),
+            return { cartItems: [...state.cartItems, { ...productToAdd, quantity: 1 }] };
+        }),
+        
+        removeItemFromCart: (productToRemove) => set((state) => ({ cartItems: state.cartItems.filter((cartItem => cartItem.id !== productToRemove.id)) })),
+        increaseItemInCart: (productToIncrease) => set((state) => ({
+            cartItems: state.cartItems.map(item => item.id === productToIncrease.id ?
+                { ...item, quantity: item.quantity + 1 }
+                : item)
+            })),
 
-    removeItemFromCart: (productToRemove) => set((state) => ({ cartItems: state.cartItems.filter((cartItem => cartItem.id !== productToRemove.id)) })),
-    increaseItemInCart: (productToIncrease) => set((state) => ({
-        cartItems: state.cartItems.map(item => item.id === productToIncrease.id ?
-            { ...item, quantity: item.quantity + 1 }
-            : item)
-    })),
-
-    decreaseItemInCart: (productToDecrease) => set((state) => {
+            decreaseItemInCart: (productToDecrease) => set((state) => {
         if (productToDecrease.quantity === 1) {
             return { cartItem: state.cartItems.filter((cartItem => cartItem.id !== productToDecrease.id)) }
         } else {
@@ -34,4 +34,7 @@ export const useCartStore = create((set) => ({
     }),
     setProductNum: () => set((state) => ({ productNum: state.cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0)})),
     setTotalItemPrice: (value) => set({ totalItemPrice: value }),
+    
+    checkoutNum: 1,
+    setCheckoutNum: (value) => set({ checkoutNum: value }),
 }));

@@ -4,11 +4,19 @@ import './sidebar-cart.styles.scss'
 import EmptyCart from '../../assets/empty-cart.png'
 
 import SidebarCartProduct from '../sidebar-cart-product/sidebar-cart-product.component';
+import { useNavigate } from 'react-router-dom';
 const SidebarCart = () => {
-    const { cartItems } = useCartStore(useShallow(state => ({
+    const navigate = useNavigate()
+    const { cartItems,setCartIsOpened } = useCartStore(useShallow(state => ({
         cartItems: state.cartItems,
-
+        setCartIsOpened:state.setCartIsOpened
     })))
+
+    const navigateHandler = () => {
+        navigate('/checkout')
+        setCartIsOpened(false)
+
+    }
     return (
         <div className={`sidebar-cart-container ${cartItems.length ? 'occupied' : ''}`}>
 
@@ -17,11 +25,11 @@ const SidebarCart = () => {
                 <>
                     <div className="sidebar-cart-products-container">
                         {(cartItems.map((item, index) =>
-                            <SidebarCartProduct key={index} item={item}/>
+                            <SidebarCartProduct key={index} item={item} />
                         ))}
                     </div>
                     <div className="view-cart-button-container">
-                        <button>View Cart</button>
+                        <button onClick={navigateHandler}>View Cart</button>
                     </div>
                 </>
                 : (

@@ -10,7 +10,9 @@ import LoadingScreen from './components/loading-screen/loading-screen.component.
 const Home = lazy(() => import('./routes/home/home.component'))
 const Layout = lazy(() => import('./routes/layout/layout.component.jsx'))
 const Auth = lazy(() => import('./routes/auth/auth.component'))
-const Category = lazy(() => import('./components/category/category.component.jsx'))
+const Checkout = lazy(() => import('./routes/checkout/checkout.component'))
+const Category = lazy(() => import('./routes/category/category.component.jsx'))
+
 function App() {
   const { setCurrentUser } = useAuthStore(useShallow((state) => ({
     setCurrentUser: state.setCurrentUser,
@@ -52,9 +54,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path=':category/*' element={<Category />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Route>
           <Route path='/auth' element={<Auth />} />
-
           <Route path='/loading' element={<LoadingScreen />} />
         </Routes>
       </Suspense>

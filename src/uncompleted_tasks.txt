@@ -1,6 +1,6 @@
  product-preview        'done'
  cart sidebar           'done'
- searching box 
+ searching box          'done'
  checkout 
  language
  dark mode

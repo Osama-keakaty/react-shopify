@@ -57,10 +57,11 @@ $aqua: #1ac8e1;
     }
 
     .categories-dropdown-content {
+        width: 100%;
         visibility: hidden;
         position: absolute;
         top: 30px;
-        left: 10px;
+        left: 0px;
         opacity: 0;
         transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
