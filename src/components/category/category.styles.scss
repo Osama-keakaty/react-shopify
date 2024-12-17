@@ -1,0 +1,10 @@
+.category-container {
+    background-color: var(--background-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    margin: auto;
+}

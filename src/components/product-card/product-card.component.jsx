@@ -1,6 +1,6 @@
 import './product-card.styles.scss'
 import { IoIosStar } from "react-icons/io";
-import { FiPlus } from "react-icons/fi";
+// import { FiPlus } from "react-icons/fi";
 import { useCartStore } from '../../stores/cart.store';
 import { useShallow } from 'zustand/shallow';
 import { useEffect } from 'react';
@@ -34,7 +34,7 @@ const ProductCard = ({ product, categoryName }) => {
                 </div>
                 <button
                     className='add-to-cart-button'
-                    onClick={() => addItemToCart(product)}><FiPlus /></button>
+                    onClick={() => addItemToCart(product)}>+</button>
 
             </div>
         </div>

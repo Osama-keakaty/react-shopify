@@ -1,12 +1,14 @@
 $max-width:600px;
 .search-box-item-container{
     padding: 10px;
+    background-color: var(--background-color);
+
     @media (max-width:$max-width){
         font-size: 3vw;
 
     }
     &:hover{
-        background-color: #eceff2;
+        background-color: var(--list-hover-color);
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;

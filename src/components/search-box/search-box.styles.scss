@@ -14,8 +14,10 @@ $aqua: #1ac8e1;
         padding-left: 10px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        border: 1px solid #d8d8d8;
+        border: 1px solid var(--list-hover-color);
         outline: none;
+        background-color: var(--background-color);
+        color: var(--text-color);
 
         &::placeholder {
             color: #cccccc;
@@ -51,7 +53,7 @@ $aqua: #1ac8e1;
         width: 100%;
         left: 0;
         top: 0;
-        background-color: #f6f9fc;
+        background-color: var(--background-color);
         box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 10%);
 
         z-index: 200;

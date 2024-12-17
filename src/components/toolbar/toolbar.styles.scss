@@ -9,6 +9,7 @@ $max-width: 600px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    color: var(--text-color);
 
     .logo-container {
         cursor: pointer;
@@ -18,7 +19,7 @@ $max-width: 600px;
         align-items: center;
 
         h5 {
-            color: $main-color;
+            color:var(--text-color);
         }
 
         @media (max-width:$max-width) {

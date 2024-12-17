@@ -35,6 +35,6 @@ export const useCartStore = create((set) => ({
     setProductNum: () => set((state) => ({ productNum: state.cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0)})),
     setTotalItemPrice: (value) => set({ totalItemPrice: value }),
     
-    checkoutNum: 1,
+    checkoutNum: 0,
     setCheckoutNum: (value) => set({ checkoutNum: value }),
 }));

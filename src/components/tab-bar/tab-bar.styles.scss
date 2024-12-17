@@ -10,7 +10,6 @@ $aqua: #1ac8e1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     .dropdowns-container {
         @media (max-width:$max-width) {
             display: none;
@@ -22,7 +21,7 @@ $aqua: #1ac8e1;
 
     .hamburger-menu {
         display: none;
-        background-color: #2b3445;
+        background-color: var(--primary-color);
         color: $white-color;
         padding: 7px;
         border-radius: 5px;

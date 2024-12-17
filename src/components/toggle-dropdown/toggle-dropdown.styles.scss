@@ -24,7 +24,7 @@ $black-color: black;
         visibility: hidden;
         opacity: 0;
         color: $black-color;
-        background-color: $white-color;
+        background-color: var(--background-color);
         position: absolute;
         left: -5px;
         display: flex;
@@ -37,18 +37,18 @@ $black-color: black;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-        transition: all 0.2s ease-in-out;
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        -ms-transition: all 0.2s ease-in-out;
-        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
         transform: translateY(-10px);
         -webkit-transform: translateY(-10px);
         -moz-transform: translateY(-10px);
         -ms-transform: translateY(-10px);
         -o-transform: translateY(-10px);
         z-index: 10;
-
+        
         &.opened {
             opacity: 1;
             transform: translateY(4px);
@@ -58,7 +58,7 @@ $black-color: black;
             -o-transform: translateY(4px);
             visibility: visible;
         }
-
+        
         &.closed {
             opacity: 0;
             transform: translateY(-10px);
@@ -67,8 +67,14 @@ $black-color: black;
             -ms-transform: translateY(-10px);
             -o-transform: translateY(-10px);
         }
-
+        
         .toggle-dropdown-item {
+            color: var(--text-color);
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -81,7 +87,7 @@ $black-color: black;
             -o-border-radius: 5px;
 
             &:hover {
-                background-color: rgb(236, 235, 235);
+                background-color: var(--list-hover-color);
             }
 
             img {

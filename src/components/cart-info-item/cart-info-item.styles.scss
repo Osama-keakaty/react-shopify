@@ -1,0 +1,19 @@
+.cart-info-item-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    gap: 30px;
+padding: 20px;
+background-color: var(--second-main-color);
+    .cart-info-item-content {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        img {
+            width: 60%;
+            height: 90%;
+        }
+    }
+
+}

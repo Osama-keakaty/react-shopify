@@ -1,4 +1,4 @@
-$aqua:#1ac8e1;
+$aqua:rgba(22,119,255,1);
 .category-dropdown-container {
     display: flex;
     gap: 20px;
@@ -9,7 +9,7 @@ font-size: 14px;
     font-size: 2.5vw;
 }
     &:hover {
-        background-color: #eceff2;
+        background-color: var(--list-hover-color);
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;

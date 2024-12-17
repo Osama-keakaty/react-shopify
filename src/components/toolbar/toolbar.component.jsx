@@ -5,17 +5,20 @@ import SearchBox from '../search-box/search-box.component'
 import { useCartStore } from '../../stores/cart.store'
 import { useShallow } from 'zustand/shallow'
 import { ReactComponent as ShopLogo } from '../../assets/shop-logo.svg'
+import { ReactComponent as ShopLogo2 } from '../../assets/shop-logo2.svg'
 import Sidebar from '../sidebar/sidebar.component'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import SidebarCart from '../sidebar-cart/sidebar-cart.component'
+import { useNavigationStore } from '../../stores/navigation.store'
 
 const Toolbar = () => {
-    const { cartIsOpened, setCartIsOpened,productNum } = useCartStore(useShallow((state) => ({
+    const { cartIsOpened, setCartIsOpened, productNum } = useCartStore(useShallow((state) => ({
         cartIsOpened: state.cartIsOpened,
         setCartIsOpened: state.setCartIsOpened,
-        productNum:state.productNum,
+        productNum: state.productNum,
     })))
+    const mode = useNavigationStore(useShallow(state => state.mode))
     useEffect(() => {
 
         const closeHandler = (event) => {
@@ -36,10 +39,11 @@ const Toolbar = () => {
     return (
         <div className="toolbar-container">
             <div className="sidbar">
-                <Sidebar isOpened={cartIsOpened} children={<SidebarCart/>} />
+                <Sidebar isOpened={cartIsOpened} children={<SidebarCart />} />
             </div>
             <Link to={'/'} className="logo-container" >
-                <ShopLogo />
+                {mode.value === 'dark' ? <ShopLogo2 /> : <ShopLogo />}
+                {/* <ShopLogo2 /> */}
                 <h5>React <br />Shopify</h5>
             </Link>
             <div className="search-box">

@@ -7,3 +7,4 @@
  typeScript
  upload cart to fireStore
  footer                 'done'
+ add df to category

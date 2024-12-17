@@ -2,6 +2,7 @@ $main-color: #000c2c;
 $second-color: #d23f57;
 $white-color: white;
 $black-color: black;
+$max-width: 575px;
 
 .checkout-container {
     width: 100%;
@@ -9,65 +10,69 @@ $black-color: black;
     justify-content: space-between;
     padding: 20px 50px;
 
-    .checkout-section {
-        position: relative;
-        width: 20%;
-        padding-left: 10px;
-        // overflow: hidden;
+    .ant-steps-item {
+        .ant-steps-item-container {
+            .ant-steps-item-icon{
+                .ant-steps-icon{
+                    color: var(--text-color);
+                    .ant-steps-finish-icon{
+                        color: var(--primary-color);
 
-        &:not(:last-child)::after {
-            position: absolute;
-            top: 16px;
-            inset-inline-start: 100%;
-            display: block;
-            width: 9999px;
-            height: 1px;
-            background: rgba(5, 5, 5, 0.06);
-            content: "";
-
-            
-        }
-        &.active::after {
-            background-color: green;
-
-        }
-
-        .step-checkout-title {
-            // color: gold;
-
-
-            &.active {
-                
-
-                &::after {
-                    position: absolute;
-                    top: 16px;
-                    inset-inline-start: 100%;
-                    display: block;
-                    width: 99px;
-                    height: 1px;
-                    background: green;
-                    content: "";
+                    }
                 }
             }
+            .ant-steps-item-content {
+                .ant-steps-item-title,.ant-steps-item-description {
+                    color: var(--text-color);
+                }
+
+            }
+
+        }
+    }
 
 
-            .number {
-                width: 40px;
-                height: 40px;
-                background-color: $second-color;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: $white-color;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
+    .ant-steps-item-process {
+
+
+        .ant-steps-item-icon {
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+            -ms-transition: .2s;
+            -o-transition: .2s;
+
+            @media (max-width:$max-width) {
+
+                background-color: #d23f57;
+            }
+
+            .ant-steps-icon {
+
+                .ant-steps-finish-icon {
+                    color: #d23f57;
+                }
             }
         }
 
+        .ant-steps-item-title {
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+            -ms-transition: .2s;
+            -o-transition: .2s;
+
+            @media (max-width:$max-width) {
+                &::after {
+                    background-color: #d23f57;
+                }
+
+            }
+        }
+    }
+
+    .divider {
+        padding: 20px;
     }
 
 }

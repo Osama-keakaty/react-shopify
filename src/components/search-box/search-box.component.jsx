@@ -15,7 +15,7 @@ const SearchBox = () => {
     const [filteredShopData, setFilteredShopData] = useState(shopData);
 
     const onChangeHandler = (event) => {
-        const boxValue = event.target.value
+        const boxValue = event.target.value.toLowerCase()
         if (boxValue.length) {
             setSearchBoxValue(boxValue)
         } else {
@@ -47,10 +47,9 @@ const SearchBox = () => {
         setShopData(newMap.flatMap(section => section))
     }, []);
     useEffect(() => {
-        const newShopData = shopData.filter(item => item.name.toLowerCase().includes(searchBoxValue))
+        const newShopData = shopData.filter(item => item.name.toLowerCase().includes(searchBoxValue.toLowerCase()))
         setFilteredShopData(newShopData)
     }, [searchBoxValue, setFilteredShopData, shopData])
-    console.log(searchBoxValue.length)
     return (
         <>
             <div className="search-box-container">

@@ -7,33 +7,38 @@ body {
   background-color: #f6f9fc;
   overflow-x: hidden;
   appearance: none;
-  color:#000c2c;
+  color: var(--text-color);
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
 
   &::-webkit-scrollbar {
-      width: 15px;
+    width: 15px;
   }
 
   &::-webkit-scrollbar-track {
-      background: #f1f1f1;
+    background: #f1f1f1;
   }
 
   &::-webkit-scrollbar-thumb {
-      background: #888;
+    background: #888;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-      background: #555;
+    background: #555;
   }
 }
 
-*{
+* {
   box-sizing: border-box;
 }
-ul{
+
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
-

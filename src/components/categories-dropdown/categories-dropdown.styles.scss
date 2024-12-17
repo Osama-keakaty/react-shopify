@@ -1,13 +1,18 @@
 $white-color: #fff;
 $black-color: #000;
-$aqua: #1ac8e1;
+$aqua: rgba(22, 119, 255, 1);
 
 .categories-dropdown-container {
     display: flex;
     position: relative;
     cursor: pointer;
     z-index: 100;
-    // width: 20vw;
+    color: var(--text-color);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
 
     .categories-dropdown-title {
         width: 100%;
@@ -16,12 +21,13 @@ $aqua: #1ac8e1;
         justify-content: space-between;
         gap: 20px;
         padding: 10px;
-        background-color: #f6f9fc;
+        background-color: var(--background-color);
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
+
         &:hover {
             color: $aqua;
         }
@@ -52,7 +58,7 @@ $aqua: #1ac8e1;
                 font-size: 2.9vw;
             }
         }
-     
+
 
     }
 
@@ -68,8 +74,8 @@ $aqua: #1ac8e1;
         -moz-transition: all 0.2s ease-in-out;
         -ms-transition: all 0.2s ease-in-out;
         -o-transition: all 0.2s ease-in-out;
-        color: $black-color;
-        background-color: #f6f9fc;
+        color: var(--text-color);
+        background-color: var(--background-color);
         box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 10%);
         padding: 10px;
         flex-direction: column;

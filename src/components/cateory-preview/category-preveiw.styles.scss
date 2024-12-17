@@ -10,10 +10,11 @@ $black-color: black;
     justify-content: space-between;
     gap: 20px;
     padding-left: 20px;
-    margin-top: 30px;
+    padding-top: 30px;
+    background-color: var(--background-color);
 
     .category-preview-header-container {
-        color: $main-color;
+        color: var(--text-color);
 
         span {
             cursor: pointer;

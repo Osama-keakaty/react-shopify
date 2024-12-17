@@ -5,22 +5,30 @@ $white-color: white;
 $black-color: black;
 
 .product-preview-container {
+    padding: 30px;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: start;
-    
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+
     .product {
         width: 600px;
         display: flex;
         justify-content: center;
         gap: 30px;
         align-items: start;
-        
-    @media (max-width:$max-width) {
-        align-items: center;
-        flex-direction: column;
-    }
+
+        @media (max-width:$max-width) {
+            align-items: center;
+            flex-direction: column;
+        }
 
         .product-discription {
             width: 50%;
@@ -79,6 +87,7 @@ $black-color: black;
 
         .product-img {
             width: 50%;
+
             img {
                 border-radius: 5px;
                 -webkit-border-radius: 5px;

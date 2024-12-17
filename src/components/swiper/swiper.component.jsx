@@ -1,10 +1,10 @@
 import './swiper.styles.scss'
-import swiperImage1 from './../../assets/cat1.jpg';
-import swiperImage2 from './../../assets/cat2.jpg';
-import swiperImage3 from './../../assets/cat3.jpg';
-import swiperImage4 from './../../assets/cat4.jpg';
-import swiperImage5 from './../../assets/cat5.jpg';
-import swiperImage6 from './../../assets/cat6.jpg';
+import swiperImage1 from './../../assets/toys.png';
+import swiperImage2 from './../../assets/sport.png';
+import swiperImage3 from './../../assets/joystick.png';
+import swiperImage4 from './../../assets/furniture.png';
+import swiperImage5 from './../../assets/fashion.png';
+import swiperImage6 from './../../assets/camera.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useAppStore } from '../../stores/app.store';

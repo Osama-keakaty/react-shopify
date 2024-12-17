@@ -5,9 +5,14 @@ $black-color: black;
 $max-width: 600px;
 
 .navigation-container {
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
     display: flex;
     flex-direction: column;
-    background-color: $white-color;
+    background-color: var(--main-color);
 
     .header {
         border-top: 1px solid $second-color ;
