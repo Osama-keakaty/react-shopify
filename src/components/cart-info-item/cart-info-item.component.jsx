@@ -10,22 +10,24 @@ const CartInfoItem = ({ item }) => {
         increaseItemInCart: state.increaseItemInCart,
         decreaseItemInCart: state.decreaseItemInCart,
     })))
-    console.log(item)
+    console.log('item',item)
     return (
         <div className='cart-info-item-container'>
             <div className="cart-info-item-content">
-            <img src={item.imageUrl} alt="" />
-            <div className="cart-info-item-details">
-                <h3>{item.name}</h3>
-                <span>{item.price}</span>
-                <div className="edit-quantity">
-                    <button className='increase-btn' onClick={() => increaseItemInCart(item)}><IoIosAddCircle /></button>
-                    <p>{item.quantity}</p>
-                    <button className='decrease-btn' onClick={() => decreaseItemInCart(item)}><IoIosRemoveCircleOutline /></button>
+                <div className="cart-info-item-img">
+                    <img src={item.imageUrl} alt="" />
+                </div>
+                <div className="cart-info-item-details">
+                    <h3>{item.name}</h3>
+                    <span className='price'>{item.price}$</span>
+                    <div className="edit-quantity">
+                        <span className='increase-btn' onClick={() => increaseItemInCart(item)}><IoIosAddCircle /></span>
+                        <p>{item.quantity}</p>
+                        <span className='decrease-btn' onClick={() => decreaseItemInCart(item)}><IoIosRemoveCircleOutline /></span>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
             <span className='remove-btn' onClick={() => removeItemFromCart(item)}><AiOutlineClose /></span>
         </div>
     )

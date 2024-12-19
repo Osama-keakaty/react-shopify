@@ -1,25 +1,18 @@
 import './product-card.styles.scss'
 import { IoIosStar } from "react-icons/io";
-// import { FiPlus } from "react-icons/fi";
 import { useCartStore } from '../../stores/cart.store';
 import { useShallow } from 'zustand/shallow';
-import { useEffect } from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const ProductCard = ({ product, categoryName }) => {
     const addItemToCart = useCartStore(useShallow(state => state.addItemToCart))
-    const setProductNum = useCartStore(useShallow(state => state.setProductNum))
-    const cartItems = useCartStore(useShallow(state => state.cartItems))
     const navigate = useNavigate();
-    const navigateHandler=()=>{
-    navigate(`/${categoryName}/${product.id}`)
+    const navigateHandler = () => {
+        navigate(`/${categoryName}/${product.id}`)
     }
-    useEffect(() => {
-        setProductNum()
-    }, [setProductNum, cartItems])
     return (
         <div className='product-card-container'>
 
-                <img src={product.imageUrl} alt="" onClick={navigateHandler}/>
+            <img src={product.imageUrl} alt="" onClick={navigateHandler} />
             <div className="footer-card">
                 <div className='product-card-details-container'>
                     <h5 className='name'>{product.name}</h5>

@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import { Routes, Route } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import { useEffect } from 'react';
@@ -8,6 +8,7 @@ import { useShallow } from 'zustand/shallow';
 import { useAppStore } from './stores/app.store.js';
 import LoadingScreen from './components/loading-screen/loading-screen.component.jsx';
 import { useNavigationStore } from './stores/navigation.store.js';
+import { useCartStore } from './stores/cart.store.js';
 const Home = lazy(() => import('./routes/home/home.component'))
 const Layout = lazy(() => import('./routes/layout/layout.component.jsx'))
 const Auth = lazy(() => import('./routes/auth/auth.component'))
@@ -18,6 +19,10 @@ function App() {
   const setCurrentUser = useAuthStore(useShallow((state) => (state.setCurrentUser)))
   const setWidthWindow = useAppStore(useShallow((state) => (state.setWidthWindow)))
   const mode = useNavigationStore(useShallow(state => state.mode))
+  const {setProductNum,cartItems} = useCartStore(useShallow(state=>({
+    cartItems:state.cartItems,
+    setProductNum:state.setProductNum
+  })))
 
   useEffect(() => {
     try {
@@ -42,7 +47,10 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   }, [setWidthWindow]);
-  console.log(mode.value)
+
+  useEffect(() => {
+    setProductNum()
+}, [setProductNum, cartItems])
 
   return (
     <div className={`app ${mode.value === 'dark' ? 'dark-mode' : ''}`} >

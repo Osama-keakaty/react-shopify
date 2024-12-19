@@ -1,10 +1,9 @@
  product-preview        'done'
  cart sidebar           'done'
  searching box          'done'
- checkout 
+ dark mode              'done'
  language
- dark mode
+ checkout 
  typeScript
  upload cart to fireStore
  footer                 'done'
- add df to category

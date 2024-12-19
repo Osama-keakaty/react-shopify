@@ -1,19 +1,92 @@
 .cart-info-item-container {
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: space-between;
     gap: 30px;
-padding: 20px;
-background-color: var(--second-main-color);
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
     .cart-info-item-content {
-        width: 50%;
+        width: 60%;
         display: flex;
         justify-content: space-between;
         height: 100%;
-        img {
-            width: 60%;
-            height: 90%;
+        gap: 10%;
+
+        .cart-info-item-img {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            width: 35%;
+            height: 10vw;
+            min-width: 100px;
+            min-height: 100px;
+
+
+            img {
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+                width: 100%;
+                object-fit: cover;
+            }
         }
+
+        .cart-info-item-details {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .price{
+                color:var(--secondary-color);
+                margin: 10px;
+    
+            }
+            .edit-quantity {
+                display: flex;
+                min-width: 100px;
+    
+                p {
+                    display: flex;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                }
+    
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 0;
+                    color: var(--text-color);
+                    outline: 0;
+                    font-size: 20px;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+    .remove-btn{
+        color: var(--secondary-color);
+        cursor: pointer;
     }
 
 }

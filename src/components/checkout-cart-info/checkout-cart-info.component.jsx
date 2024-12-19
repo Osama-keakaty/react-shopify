@@ -2,7 +2,6 @@ import { useShallow } from 'zustand/shallow';
 import { useCartStore } from '../../stores/cart.store';
 import './checkout-cart-info.styles.scss'
 import CartInfoItem from '../cart-info-item/cart-info-item.component';
-import SidebarCartProduct from '../sidebar-cart-product/sidebar-cart-product.component';
 
 const CheckoutCartInfo = () => {
     const { cartItems } = useCartStore(useShallow(state => ({
