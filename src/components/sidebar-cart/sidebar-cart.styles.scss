@@ -91,13 +91,21 @@ $black-color: black;
     }
 
 
-
+.empty-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     img {
+        filter: drop-shadow(1px 6px 10px #8a8a8a99);
+            -webkit-filter: drop-shadow(1px 6px 10px #8a8a8a99);
         width: 70%;
     }
 
     span {
         color: var(--text-color);
     }
+}
+
 
 }

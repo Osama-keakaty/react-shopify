@@ -25,11 +25,11 @@ $aqua: #1ac8e1;
 
         &:focus,
         &:hover {
-            border: 1px solid $aqua;
+            border: 1px solid rgba(22, 119, 255, 1);
         }
 
         &:focus {
-            box-shadow: 0px 0px 5px 0px $aqua;
+            box-shadow: 0px 0px 5px 0px rgba(22, 119, 255, 1);
         }
     }
 

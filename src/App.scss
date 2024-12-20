@@ -6,13 +6,17 @@
     --main-color: white;
     --background-color: #f6f9fc;
     --list-hover-color: #dfdfdf;
-
+    
+}
+.app{
+    width:100%;
+    overflow-x: hidden;
+    &.dark-mode {
+        --list-hover-color: #3a3a3b;
+        --text-color: #fff;
+        --main-color: #2c3a47;
+        --background-color: #0f172a;
+    
+    }
 }
 
-.dark-mode {
-    --list-hover-color: #3a3a3b;
-    --text-color: #fff;
-    --main-color: #2c3a47;
-    --background-color: #0f172a;
-
-}

@@ -11,68 +11,89 @@ $max-width: 575px;
     padding: 20px 50px;
 
     .ant-steps-item {
-        .ant-steps-item-container {
-            .ant-steps-item-icon{
-                .ant-steps-icon{
-                    color: var(--text-color);
-                    .ant-steps-finish-icon{
-                        color: var(--primary-color);
 
+        &.ant-steps-item-wait,
+        &.ant-steps-item-finish,
+        &.ant-steps-item-process {
+            .ant-steps-item-container {
+                .ant-steps-item-icon {
+                    .ant-steps-icon {
+                        color: white;
+
+                        .ant-steps-finish-icon {
+                            color: white;
+
+                        }
+                    }
+                }
+
+                .ant-steps-item-content {
+
+                    .ant-steps-item-title,
+                    .ant-steps-item-description {
+                        color: var(--text-color);
+                    }
+
+                }
+            }
+        }
+
+        &.ant-steps-item-finish {
+            .ant-steps-item-icon {
+                background-color: #1677ff;
+            }
+        }
+
+        &.ant-steps-item-wait {
+            .ant-steps-item-container {
+                .ant-steps-item-icon {
+                    .ant-steps-icon {
+                        color: var(--text-color);
+
+                        .ant-steps-finish-icon {
+                            color: var(--text-color);
+
+                        }
                     }
                 }
             }
-            .ant-steps-item-content {
-                .ant-steps-item-title,.ant-steps-item-description {
-                    color: var(--text-color);
-                }
-
-            }
-
-        }
-    }
-
-
-    .ant-steps-item-process {
-
-
-        .ant-steps-item-icon {
-            transition: .2s;
-            -webkit-transition: .2s;
-            -moz-transition: .2s;
-            -ms-transition: .2s;
-            -o-transition: .2s;
-
-            @media (max-width:$max-width) {
-
-                background-color: #d23f57;
-            }
-
-            .ant-steps-icon {
-
-                .ant-steps-finish-icon {
-                    color: #d23f57;
-                }
-            }
         }
 
-        .ant-steps-item-title {
-            transition: .2s;
-            -webkit-transition: .2s;
-            -moz-transition: .2s;
-            -ms-transition: .2s;
-            -o-transition: .2s;
+        &.ant-steps-item-process {
 
-            @media (max-width:$max-width) {
-                &::after {
+            .ant-steps-item-icon {
+
+                @media (max-width:$max-width) {
+
                     background-color: #d23f57;
                 }
 
             }
+
         }
     }
 
+
+
+
     .divider {
+        width: 100px;
+        overflow: hidden;
         padding: 20px;
+
+        .ant-divider {
+            width: 100px;
+
+        }
     }
 
+}
+
+.checkout-content {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    @media (max-width:700px) {
+        flex-direction: column;
+    }
 }

@@ -1,0 +1,22 @@
+.checkout-review-container{
+    display: flex;
+    min-height: 40vw;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .checked-circle{
+        color: #52c41a;
+    }
+    .checkout-review-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items:center;
+        color: var(--text-color);
+        h2,span{
+            text-align: center;
+        }
+    }
+}

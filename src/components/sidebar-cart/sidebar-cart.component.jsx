@@ -33,10 +33,10 @@ const SidebarCart = () => {
                     </div>
                 </>
                 : (
-                    <>
+                    <div className='empty-cart'>
                         <img src={EmptyCart} alt='' />
                         <span>The Cart Is Empty</span>
-                    </>
+                    </div>
                 )
             }
 

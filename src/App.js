@@ -19,9 +19,10 @@ function App() {
   const setCurrentUser = useAuthStore(useShallow((state) => (state.setCurrentUser)))
   const setWidthWindow = useAppStore(useShallow((state) => (state.setWidthWindow)))
   const mode = useNavigationStore(useShallow(state => state.mode))
-  const {setProductNum,cartItems} = useCartStore(useShallow(state=>({
+  const {setProductNum,cartItems,setTotalItemPrice} = useCartStore(useShallow(state=>({
     cartItems:state.cartItems,
-    setProductNum:state.setProductNum
+    setProductNum:state.setProductNum,
+    setTotalItemPrice:state.setTotalItemPrice
   })))
 
   useEffect(() => {
@@ -49,8 +50,9 @@ function App() {
   }, [setWidthWindow]);
 
   useEffect(() => {
-    setProductNum()
-}, [setProductNum, cartItems])
+    setProductNum();
+    setTotalItemPrice();
+}, [setProductNum, cartItems,setTotalItemPrice])
 
   return (
     <div className={`app ${mode.value === 'dark' ? 'dark-mode' : ''}`} >

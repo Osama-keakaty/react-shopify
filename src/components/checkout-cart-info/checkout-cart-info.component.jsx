@@ -2,6 +2,7 @@ import { useShallow } from 'zustand/shallow';
 import { useCartStore } from '../../stores/cart.store';
 import './checkout-cart-info.styles.scss'
 import CartInfoItem from '../cart-info-item/cart-info-item.component';
+import EmptyCart from '../../assets/empty-cart.png'
 
 const CheckoutCartInfo = () => {
     const { cartItems } = useCartStore(useShallow(state => ({
@@ -11,13 +12,23 @@ const CheckoutCartInfo = () => {
     })))
     console.log(cartItems)
     return (
-        <>
-            {cartItems.length &&
+        <div className={`checkout-cart-info-container ${cartItems.length ===0 && 'empty'}`}>
+            {cartItems.length > 0 ?
+                (
+                    <>
+                        {cartItems.map(item => <CartInfoItem key={item.id} item={item} />)}
 
-                (<div className='checkout-cart-info-container'>
-                    {cartItems.map(item => <CartInfoItem key={item.id} item={item} />)}
-                </div>)}
-        </>
-    )
-}
-export default CheckoutCartInfo;
+                    </>
+                )
+                :
+                (
+                    <div className='empty-cart'>
+                        <img src={EmptyCart} alt='' />
+                        <span>The Cart Is Empty</span>
+                    </div>
+                )
+            }
+        </div>
+        )
+    }
+    export default CheckoutCartInfo;
